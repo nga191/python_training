@@ -43,11 +43,14 @@ file_data = "bang doanh so"
 print(file_data[0])
     # Có thể nhập một khoảng giá trị như sau: file_data[0:4]
 print(file_data[0:4])
+
     # Có thể chọn các chỉ số chẵn: file_data[::2]
 print(file_data[::2])
+
     # Có thể chọn các giá trị không liên tục: file_data[0:độ dài muốn chọn giá trị:2]
 file_data = "bang doanh so"   
 print(file_data[0:13:2])
+
     # Sử dụng len để biết độ dài của string
 print(len(file_data))
     # \ là một ký tự đặc biệt trong string. VD: \n là xuống dòng và \t là tab
@@ -90,17 +93,50 @@ print(doanh_so)
 
 # Dictionaries: từ điển: bao gồm có key và value, mỗi key sẽ gắn liền với một value
 # Dictionaries nằm trong dấu ngoặc nhọn, list là ngoặc vuông, tuple là ngoặc tròn.
+
+# Đây là dictionaries: từ điển và không có thứ tự, không giống với list và tuple có thứ tự
+
 example_dictionaries = {"metagame" : 2021, "sonatgame" : 2020}
 print(type(example_dictionaries))
 print(example_dictionaries.keys())
-    # Để tìm value của một key dùng method sau: 
+
+    # Để tìm value của một key dùng method sau:
 print(example_dictionaries["metagame"])
-    # Thêm một key và một value vào dictionaries như sau:
+
+    # Thêm một key và một value vào dictionaries như sau: Thêm thì chỉ cần phần tên của dictionaries sau đó là từ khóa bằng value
 example_dictionaries["rocketstudio"] = 2015
 example_dictionaries["betagame"] = 2020
 print(example_dictionaries)
-    # Để xóa một key và value trond dictionaries làm như sau: 
+
+    # Để xóa một key và value trond dictionaries làm như sau: dùng del để xóa
 del(example_dictionaries["betagame"])
 print(example_dictionaries)
-    # Để xác định một key có trong dictionaries không làm như sau:
+
+    # Để xác định một key có trong dictionaries không làm như sau: sử dụng lệnh in: 
+    # Có thể hiểu là hỏi nó có ở trong dictionaries đấy không. Hiểu đơn giản như vậy
 print("tripsoft" in example_dictionaries)
+
+# Sets: Tập hợp: giống với dictionaries không có thứ tứ, tuy nhiên nó chứa các giá trị độc lập và không trùng lặp
+# Khác với dictionaries có thể trùng nhau ở phần value
+example_set = {"rockit_studio", "metagame", "sonatgame", "xgame"}
+
+# Để chuyển đổi một list => set, sử dụng hàm set và dùng list đó làm đầu vào
+# Ví dụ chuyển từ 
+example_list = ["name_company_game_i_want_to_do_work_in_there", "sonat", "rockit", "metagame", "sonat"]
+example_list_to_set = set(example_list)
+print(example_list_to_set) # Đây là ví dụ điển hình, vì vậy có thể sử dụng hàm này để lọc data trùng lặp nếu sử dụng python, bằng cách chuyển file excel sang CSV
+
+# Thêm một phần tử mới vào set bằng cách sử dụng hàm add
+example_set.add("trip_global")
+print(example_list)
+
+# Khác với list, khi thêm phần tử mới sử dụng hàm append hoặc insert, còn sets thì sử dụng hàm add, còn xóa thì giống nhau đều là remove
+# Xóa một phần tử của set bằng cách sử dụng hàm remove
+example_set.remove("trip_global")
+print(example_list)
+
+# Có thể xác định một phần tử có trong set hay không bằng cách sử dụng lệnh in, phần này giống với dictionaries
+print("one_game" in example_set)
+
+
+

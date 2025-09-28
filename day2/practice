@@ -1,0 +1,4 @@
+print("Hello everyone! My name is Nga")
+# Module 1: Làm quen: Các kiểu dữ liệu: int, float, string, boolen
+# Module 2: Các kiểu tập hợp trong Python: Tuple, List, Dictionaries, Sets
+# Module 3: Conditions and Branching, Loop (Vòng lặp), Function, Exception handling, Objects and classes
